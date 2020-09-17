@@ -259,11 +259,11 @@ body {
   width: 100%;
   height: 30px;
   border: none;
-  background-image: url(//img/search.png);
+  background-image: url(../img/search.png);
   background-size: 20px;
   background-repeat: no-repeat;
-  background-position: 120px;
-  padding-left: 20px;
+  background-position: calc(100% - 20px);
+  padding: 0 50px 0 20px;
   font-size: 15px;
   color: #919eb1;
 }
@@ -296,18 +296,17 @@ body {
   font-size: 15px;
   color: #fff;
 }
-.social-media{
+.social-media {
   display: flex;
   justify-content: center;
   margin-bottom: 25px;
 }
-.social-media img{
+.social-media img {
   margin-right: 20px;
 }
-.social-media :last-child{
+.social-media :last-child {
   margin-right: 0px;
 }
-
 
 /* ----------------- Mobile navigation END ----------------- */
 
@@ -329,6 +328,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 45px;
+  cursor: pointer;
 }
 .title-button p {
   font-weight: normal;
@@ -380,6 +380,21 @@ body {
 
 .main-block-bg {
   background-color: #f3f4f4;
+}
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+  background: #8a7f7f;
+  color: #fff !important;
+  border-radius: 100%;
+  outline: none;
+  width: 53px;
+  height: 53px;
+}
+.owl-theme .owl-nav {
+  top: -30px !important;
+}
+.owl-nav span {
+  font-size: 30px;
 }
 
 /* -------------Block Publications start------------*/
@@ -765,8 +780,7 @@ body {
   background: linear-gradient(270deg, #0197d4 0%, #017ec0 98.92%);
 }
 .footer-upstairs-menu-bg {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-    #008cd5;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), #008cd5;
 }
 .footer-upstairs-menu {
   display: flex;
@@ -952,7 +966,7 @@ body {
     align-items: flex-end;
     margin-bottom: 0px;
   }
-  .menu-wrap{
+  .menu-wrap {
     padding-left: 46px;
     padding-right: 46px;
   }
@@ -1030,6 +1044,7 @@ body {
     background-color: #f3f4f4;
     padding-left: 15px;
     padding-right: 15px;
+    cursor: pointer;
   }
   .main-button p {
     display: flex;
