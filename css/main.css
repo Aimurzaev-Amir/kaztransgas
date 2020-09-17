@@ -4,7 +4,9 @@
   padding: 0;
   margin: 0;
 }
-
+.fixed-position {
+  overflow: hidden;
+}
 body {
   font-family: sans-serif;
 }
@@ -50,6 +52,11 @@ body {
   align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+.menuCloseIcon {
+  position: absolute !important;
+  top: 20px;
+  right: 20px;
 }
 
 /* ----------------------------------------------------- Desktop navigation -------------------------------------------- */
@@ -391,7 +398,7 @@ body {
   height: 53px;
 }
 .owl-theme .owl-nav {
-  top: -30px !important;
+  top: -50px !important;
 }
 .owl-nav span {
   font-size: 30px;
@@ -553,11 +560,12 @@ body {
   display: flex;
 }
 .advertising-info {
-  margin-right: 30px;
+  margin-right: 95px;
 }
 .year-info {
   display: flex;
   margin-top: 112px;
+  cursor: pointer;
 }
 .report-img,
 .stats-img {
@@ -567,7 +575,7 @@ body {
   height: 156px;
 }
 .report-img {
-  margin-right: 58px;
+  margin-right: 80px;
 }
 .report-img img {
   position: absolute;
@@ -812,9 +820,7 @@ body {
 }
 .social-img {
   margin-left: 8px;
-  padding-left: 7px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding: 6px 0 6px 7px;
   border-left: 2px solid #fff;
 }
 .social-img img {
@@ -824,8 +830,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 14px;
-  margin-bottom: 31px;
+  margin: 14px 0 31px 0;
 }
 .footer-text {
   margin-top: 22px;
@@ -852,6 +857,12 @@ body {
 /* ------- Parameters for Tablet and Mobile versions (Adaptive) -------- */
 
 /* Условие для экранов с шириной от 830 до 1500px */
+@media screen and (min-width: 1500px) {
+  .mobile-nav--active {
+    transform: translateX(100%);
+  }
+}
+
 @media (max-width: 1500px) {
   .nav {
     display: none;
@@ -947,13 +958,9 @@ body {
   .advertising-box-overlay {
     margin-left: 100px;
   }
-  /* .adver-1{
-    margin-bottom: 300px;
-  }
   .year-info {
-    position: absolute;
-    top: 120%;
-  } */
+    display: none;
+  }
   .max-width {
     max-width: unset;
   }
